@@ -1,0 +1,12 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+figure {
+    width: 20vw;
+}
+
+figcaption {
+    text-align: center;
+}
