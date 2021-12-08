@@ -20,7 +20,7 @@
         {
             function transform_client($client)
             {
-                return array("name"=>(string)$client["client_nickname"],"uptime"=>time()-$client["client_lastconnected"],"id"=>$client["client_database_id"]);
+                return array("name"=>(string)$client["client_nickname"],"uptime"=>time()-$client["client_lastconnected"],"id"=>$client["client_base64HashClientUID"]);
             }
             $ts3_VirtualServer = TeamSpeak3::factory("serverquery://".getenv("TS_USERNAME").":".getenv("TS_PASSWORD")."@".getenv("TS_ADDRESS").":10011/?server_port=9987");
             $arr_ClientList = $ts3_VirtualServer->clientList();
