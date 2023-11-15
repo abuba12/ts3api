@@ -3,7 +3,7 @@ fetch("/v1/clients.php").then(res=>res.json()).then((res)=>{
     res.forEach(client => {
         const figure = document.createElement("figure")
         const avatar = document.createElement("img")
-        avatar.src = `https://avatars.dicebear.com/api/bottts/${client["id"]}.svg`
+        avatar.src = `https://api.dicebear.com/7.x/bottts/svg?seed=${client["id"]}`
 
         const caption = document.createElement("figcaption")
         const minutes = Math.floor(client["uptime"]/60)
